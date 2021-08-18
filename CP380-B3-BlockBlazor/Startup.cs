@@ -28,13 +28,17 @@ namespace CP380_B3_BlockBlazor
             //
             // TODO: ADD THE HTTPCLIENT SERVICE
             //
+            services.AddHttpClient();
             services.AddRazorPages();
             services.AddServerSideBlazor();
+           
             //
             // TODO: ADD SINGLETONS FOR:
             //       - pending transactions service
             //       - block list service
             //
+             services.AddSingleton<BlockService>();
+            services.AddSingleton<PendingTransactionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

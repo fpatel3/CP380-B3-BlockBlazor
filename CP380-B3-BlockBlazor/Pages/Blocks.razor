@@ -14,12 +14,27 @@ else
 
         <!-- TODO: Add cards for each block in the block list
 
-                   Each card should show:
-                        - the position in the chain (starting at 0)
-                        - the hash
-                        - the nonce
-                        - the previous hash
-          -->
+               Each card should show:
+                    - the position in the chain (starting at 0)
+                    - the hash
+                    - the nonce
+                    - the previous hash
+      -->
+        @foreach (var bl in blocklist)
+        {
+
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+
+                <h5 class="card-title">Hash: @bl.Hash</h5>
+                <p class="card-text">Nonce: @bl.Nonce <br />  Previous Hash: @bl.PreviousHash</p>
+                <a href="..." class="btn btn-primary">See More</a>
+
+            </div>
+        </div>
+
+        }
 
     </div>
 }
